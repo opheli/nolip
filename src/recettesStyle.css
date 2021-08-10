@@ -1,0 +1,21 @@
+#StyleBorder {
+    border-style: double;
+    color: grey
+}
+
+h4::before, h4::after {
+    content:'';
+    display:inline-block;
+    vertical-align: middle;
+    width: 17rem;
+    height: 1px; 
+    background: grey
+}
+
+h4:before { 
+    margin-right: .3rem
+}
+
+h4:after { 
+    margin-left: .3rem
+}

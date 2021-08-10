@@ -6,7 +6,7 @@ function Home() {
     return (
         <Container>
            <NavbarNolip />
-           <Image src="/imgHome.jpg" fluid/>
+           <Image className="pt-5" src="/imgHome.jpg" fluid/>
         </Container>
     )
 }

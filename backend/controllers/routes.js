@@ -1,9 +1,24 @@
 const express = require('express');
 const router = express.Router();
 const ModelCiqual = require('../data/ciqual.data')
+const ModelRecettes = require('../model/recettes.model.js')
 const  { debug } = require('./utils')
 
 router.use(debug)
+
+router.post('/add', async (req, res) => {
+    const recetteData = req.body
+    const newRecette = new ModelRecettes(recetteData)
+    try {
+        const recette = await newRecette.save();
+        res.json({ success: true, message: `${recette}`})
+    } catch (error) {
+        res.json({ success: false, payload: error }, 500)
+    }
+})
+
+
+
 
 router.get('/calculateur', async (req, res) => {
     try {

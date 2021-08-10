@@ -1,0 +1,25 @@
+[
+    {
+        "ImageRecette": "String",
+        "TitleRecette": "Le Fruitéa",
+        "IngredientsRecette": [
+            "2 yaourts 0%",
+            "1 oeuf",
+            "2 pots de sucre",
+            "3 pots de farine (ne pas remplir le pot à raz bord, laisser environ ½ cm)",
+            " ½ sachet de levure",
+            "200 g de fruits"
+        ],
+        "InstructionsRecette": [
+            "Allumer le four à 180°C. Attention de ne pas beurrer le moule par réflexe.",
+            "Verser les 2 yaourts dans un saladier et ajouter dans l'ordre en mélangeant :",
+            "l’oeuf",
+            "le sucre",
+            "la farine",
+            "Mélanger bien puis ajouter la levure.",
+            "Mélanger à nouveau puis ajouter les fruits.",
+            "Mettre la préparation dans le moule et faire cuire 35 minutes.",
+            "Mélanger."
+        ]
+    }
+]
