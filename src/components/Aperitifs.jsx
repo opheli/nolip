@@ -3,15 +3,15 @@ import NavbarNolip from './NavbarNolip';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import '../recettesStyle.css';
 
-function Entrees() {
-    const [addEntrees, setAddEntrees] = useState([])
+function Aperitifs() {
+    const [addAperitifs, setAddAperitifs] = useState([])
 
     const refreshData = () => {
-        const url = 'http://localhost:8000/entrees'
+        const url = 'http://localhost:8000/aperitifs'
 
         fetch(url)
             .then(res => res.json())
-            .then(data => setAddEntrees(data))
+            .then(data => setAddAperitifs(data))
     }
 
     useEffect(() => {
@@ -21,11 +21,11 @@ function Entrees() {
 
     return (
         <div>
-            <Container style={{ paddingTop: '90px' }}>
+            <Container style={{ paddingTop: '80px' }}>
                 <NavbarNolip />
 
                 {
-                    addEntrees.map((recette, index) => {
+                    addAperitifs.map((recette, index) => {
                         return (
                             
                                 <Row className= "mt-5" key={index}>
@@ -50,7 +50,7 @@ function Entrees() {
                                     <Col xs={12} md={3} lg={4}>
                                     </Col>
                                 </Row>
-                            
+                           
                         )
                     })
                 }
@@ -61,4 +61,4 @@ function Entrees() {
     )
 }
 
-export default Entrees
+export default Aperitifs

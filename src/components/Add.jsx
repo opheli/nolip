@@ -7,28 +7,30 @@ import { useHistory } from "react-router-dom";
 
 
 
-function AddDesserts() {
+function Add() {
     const history = useHistory()
     const [type, setType] = useState("")
     const [image, setImage] = useState("")
-    const [titre, setTitre] = useState("")
-    const [ingredients, setIngredients] = useState([])
-    const [instructions, setInstructions] = useState([])
+    const [title, setTitle] = useState("")
+    const [note, setNote] = useState("")
+    const [ingredients, setIngredients] = useState("")
+    const [instructions, setInstructions] = useState("")
 
     const sendRecettes = useCallback(
-        () => {
+        (e) => {
+            e.preventDefault()
             const url = ('http://localhost:8000/add')
             fetch(url, {
                 headers: { 'Content-Type': 'application/json' },
                 method: 'POST',
-                body: JSON.stringify({ type, image, titre, ingredients, instructions }),
+                body: JSON.stringify({ type, image, title, note, ingredients, instructions }),
             })
                 .then(res => res.json())
                 .then(data => { console.log(data) })
                 .catch(err => console.log(err))
-            history.push('/desserts')
+            history.push('/add')
         },
-        [type, image, titre, ingredients, instructions, history],
+        [type, image, title, note, ingredients, instructions, history],
     )
 
 
@@ -46,7 +48,7 @@ function AddDesserts() {
                         {/* ---------Type--------- */}
                         <Form.Label>Type</Form.Label>
                         <Form.Select className="mb-3" onChange={(e) => setType(e.target.value)}>
-                            <option value="APERO">apéro</option>
+                            <option value="APERITIF">apéritif</option>
                             <option value="ENTREE">entrée</option>
                             <option value="PLAT">plat</option>
                             <option value="DESSERT">dessert</option>
@@ -55,7 +57,14 @@ function AddDesserts() {
                         {/* ---------Titre--------- */}
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                             <Form.Label>Titre</Form.Label>
-                            <Form.Control type="text" name="title" onChange={(e) => setTitre(e.target.value)} placeholder="Entrer titre" />
+                            <Form.Control type="text" name="title" onChange={(e) => setTitle(e.target.value)} placeholder="Entrer titre" />
+                        </Form.Group>
+
+
+                        {/* ---------Note--------- */}
+                        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                            <Form.Label>Bon à savoir</Form.Label>
+                            <Form.Control as="textarea" rows={3} onChange={(e) => setNote(e.target.value)} />
                         </Form.Group>
 
 
@@ -83,7 +92,7 @@ function AddDesserts() {
                         </Form.Group>
 
                         {/* ---------BUTTON SUBMIT--------- */}
-                        <Button variant="outline-warning" type="submit" onClick={sendRecettes} >
+                        <Button variant="outline-warning" type="submit" onClick={(e) => sendRecettes(e)} >
                             Submit
                         </Button>
 
@@ -94,4 +103,4 @@ function AddDesserts() {
     )
 }
 
-export default AddDesserts
+export default Add

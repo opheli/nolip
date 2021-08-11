@@ -5,7 +5,6 @@ function Calculateur() {
     return (
         <div>
             <NavbarNolip />
-           <h1> Calculateur </h1>
         </div>
     )
 }

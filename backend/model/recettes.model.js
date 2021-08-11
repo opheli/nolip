@@ -3,10 +3,11 @@ const mongoose = require('mongoose')
 const RecettesSchema = new mongoose.Schema({
     type: {
         type: String,
-        enum : ['DESSERT','ENTREE', 'APERO', 'PLAT']
+        enum : ['APERITIF','ENTREE','DESSERT','PLAT']
     },
     image: String,
     title: String,
+    note: String,
     ingredients: String,
     instructions: String,
     created: {

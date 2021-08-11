@@ -14,7 +14,7 @@ function NavbarLogin() {
             navbarScroll
           >
 
-            <Link className="nav-link active" to="/add-desserts">Add Desserts</Link>
+            <Link className="nav-link active" to="/add">Add</Link>
 
           </Nav>
         </Navbar.Collapse>

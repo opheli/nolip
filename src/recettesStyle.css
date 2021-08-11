@@ -1,21 +1,44 @@
-#StyleBorder {
+.style-border {
     border-style: double;
-    color: grey
+    color: grey;
+    margin-top: 150px;
+    margin-left: 20px;
+    padding: 20px
 }
 
-h4::before, h4::after {
+#note-principal {
+    margin-left: 50px;
+    margin-top: 15px
+
+}
+
+.soustitre::after, .soustitre::before {
     content:'';
     display:inline-block;
     vertical-align: middle;
-    width: 17rem;
-    height: 1px; 
+    width: 150px;
+    height: 1.5px; 
     background: grey
 }
 
-h4:before { 
-    margin-right: .3rem
+#note-principal::after, #note-principal::before {
+    content:'';
+    display:inline-block;
+    vertical-align: middle;
+    width: 50px;
+    height: 1.5px; 
+    background: grey
 }
 
-h4:after { 
-    margin-left: .3rem
+.soustitre:after, #note-principal::after { 
+    margin-left: .5rem
+}
+
+.soustitre:before, #note-principal::before { 
+    margin-right: .5rem
+}
+
+.soustitre {
+    padding-top: 30px;
+    text-align: center;
 }

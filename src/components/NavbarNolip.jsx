@@ -22,7 +22,7 @@ function NavbarNolip() {
             navbarScroll
           >
             <Link className="nav-link active" to="/">Home</Link>
-            <Link className="nav-link active" to="/aperos">Apéros</Link>
+            <Link className="nav-link active" to="/aperitifs">Apéritifs</Link>
             <Link className="nav-link active" to="/entrees">Entrées</Link>
             <Link className="nav-link active" to="/plats">Plats</Link>
             <Link className="nav-link active" to="/desserts">Desserts</Link>

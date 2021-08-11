@@ -17,6 +17,41 @@ router.post('/add', async (req, res) => {
     }
 })
 
+router.get('/aperitifs', async (req, res) => {
+    try {
+        const getAperitif = await ModelRecettes.find({type:'APERITIF'}).exec()
+        res.json(getAperitif)
+    } catch (error) {
+        res.status(500).json({ success: false, payload: error })
+    }
+})
+
+router.get('/entrees', async (req, res) => {
+    try {
+        const getEntrees = await ModelRecettes.find({type:'ENTREE'}).exec()
+        res.json(getEntrees)
+    } catch (error) {
+        res.status(500).json({ success: false, payload: error })
+    }
+})
+
+router.get('/plats', async (req, res) => {
+    try {
+        const getPlats = await ModelRecettes.find({type:'PLAT'}).exec()
+        res.json(getPlats)
+    } catch (error) {
+        res.status(500).json({ success: false, payload: error })
+    }
+})
+
+router.get('/desserts', async (req, res) => {
+    try {
+        const getDesserts= await ModelRecettes.find({type:'DESSERT'}).exec()
+        res.json(getDesserts)
+    } catch (error) {
+        res.status(500).json({ success: false, payload: error })
+    }
+})
 
 
 
