@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const RecettesSchema = new mongoose.Schema({
     type: {
         type: String,
-        enum : ['APERITIF','ENTREE','DESSERT','PLAT']
+        enum: ['APERITIF', 'ENTREE', 'DESSERT', 'PLAT']
     },
     image: String,
     title: String,

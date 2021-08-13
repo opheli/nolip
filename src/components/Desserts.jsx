@@ -7,7 +7,7 @@ function Desserts() {
     const [addDesserts, setAddDesserts] = useState([])
 
     const refreshData = () => {
-        const url = 'http://localhost:8000/desserts'
+        const url = '/desserts'
 
         fetch(url)
             .then(res => res.json())

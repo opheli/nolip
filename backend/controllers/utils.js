@@ -7,14 +7,5 @@ function debug(req, res, next) {
     next()
 }
 
-// const findAlimNom = async (alimNom) => {
-//     try {
-//         return await ModelCiqual.findOne({ alimNom: alimNom }).exec()
-//     } catch (err) {
-//         console.error(err)
-//     }
-// }
-
-// findAlimNom()
 
 module.exports = { debug }

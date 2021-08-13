@@ -9,13 +9,13 @@ function NavbarNolip() {
     <Container className="fixed-top mb-5">
       <Navbar bg="white" expand="lg">
         <Navbar.Brand>
-           <img
-          alt=""
-          src="/logoNolip.png"
-          width="70"
-          height="70"
-          className="align-bottom mt-4"
-        /></Navbar.Brand>
+          <img
+            alt=""
+            src="/logoNolip.png"
+            width="70"
+            height="70"
+            className="align-bottom mt-4"
+          /></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav

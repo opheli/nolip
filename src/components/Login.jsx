@@ -16,7 +16,7 @@ function Login() {
         (e) => {
             e.preventDefault()
 
-            const url = ('http://localhost:8000/login')
+            const url = ('/login')
             fetch(url, {
                 headers: { 'Content-Type': 'application/json' },
                 method: 'POST',

@@ -17,7 +17,7 @@ function Add() {
     const sendRecettes = useCallback(
         (e) => {
             e.preventDefault()
-            const url = ('http://localhost:8000/add')
+            const url = ('/add')
             fetch(url, {
                 headers: { 'Content-Type': 'application/json' },
                 method: 'POST',
