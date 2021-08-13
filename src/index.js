@@ -4,10 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { AppContextProvider } from './AppContext'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    
+    <AppContextProvider>
+      <App />
+    </AppContextProvider>
+
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -31,19 +31,19 @@ function Desserts() {
                                 <Col className="style-border" xs={12} md={9} lg={8}>
                                     <Row style={{ flexDirection: 'row' }}>
                                         <Col>
-                                            <Image style={{ width: '19rem' }} src="/imgHome.jpg" />
+                                            <Image style={{ width: '19rem' }} src={recette.image} />
                                         </Col>
                                         <Col>
                                             <h4 id="titre-principal">{recette.title}</h4>
                                             <h6 id="note-principal">Bon à savoir</h6>
-                                            <p id="note-text">{recette.note}</p>
+                                            <pre id="note-text">{recette.note}</pre>
                                         </Col>
                                     </Row>
 
                                     <h5 className="soustitre">Ingrédients</h5>
-                                    <p>{recette.ingredients}</p>
+                                    <pre>{recette.ingredients}</pre>
                                     <h5 className="soustitre">Instructions</h5>
-                                    <p>{recette.instructions}</p>
+                                    <pre>{recette.instructions}</pre>
                                 </Col>
 
                                 <Col xs={12} md={3} lg={4}>

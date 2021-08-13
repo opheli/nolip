@@ -5,8 +5,6 @@ import NavbarLogin from './NavbarLogin';
 import { useHistory } from "react-router-dom";
 
 
-
-
 function Add() {
     const history = useHistory()
     const [type, setType] = useState("")
@@ -37,8 +35,6 @@ function Add() {
     return (
         <Container>
             <NavbarNolip />
-            <p>1</p>
-            <p>1</p>
             <NavbarLogin />
             <Row>
                 <Col md={{ span: 6, offset: 3 }} className="mt-5" >
@@ -91,7 +87,7 @@ function Add() {
 
                         </Form.Group>
 
-                        {/* ---------BUTTON SUBMIT--------- */}
+                        {/* ---------Button Submit--------- */}
                         <Button variant="outline-warning" type="submit" onClick={(e) => sendRecettes(e)} >
                             Submit
                         </Button>

@@ -32,7 +32,7 @@ function Plats() {
                                     <Col className="style-border" xs={12} md={9} lg={8}>
                                         <Row style={{ flexDirection: 'row' }}>
                                             <Col>
-                                                <Image style={{ width: '19rem' }} src="/imgHome.jpg" />
+                                                <Image style={{ width: '19rem' }} src={recette.image} />
                                             </Col>
                                             <Col>
                                                 <h4 id="titre-principal">{recette.title}</h4>

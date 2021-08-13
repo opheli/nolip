@@ -2,9 +2,11 @@ import React from 'react';
 import { Navbar, Nav, Button, Form, FormControl, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
+
+
 function NavbarNolip() {
   return (
-    <Container className= "fixed-top">
+    <Container className="fixed-top mb-5">
       <Navbar bg="white" expand="lg">
         <Navbar.Brand>
            <img

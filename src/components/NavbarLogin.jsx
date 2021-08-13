@@ -1,11 +1,12 @@
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import '../style.css';
 
 function NavbarLogin() {
   return (
-    <Container className= "fluid pt-5">
-      <Navbar bg="light" expand="lg">
+    <Container className= "fluid pt-5 mt-5">
+      <Navbar bg="light" expand="lg"  id="espace-sous-navbar">
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
